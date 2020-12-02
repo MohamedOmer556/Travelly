@@ -1,0 +1,75 @@
+$header1: 4rem;
+$header2: 6rem;
+$header3: 3.5rem;
+$header4: 2rem;
+$text: 2.5rem;
+$background-color: rgb(78, 49, 75);
+$gradient: linear-gradient(left, #2d2a38, #746669);
+
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@import "global";
+@import "intro";
+@import "locations";
+@import "card-section";
+@import "contact";
+
+@media screen and (max-width: 934px) {
+  html {
+    font-size: 45%;
+  }
+}
+
+@media screen and (max-width: 672px) {
+  .logo {
+    @include flex(center, center, row);
+    padding: 1.5rem;
+  }
+
+  h2 {
+    font-size: 4.5rem;
+  }
+  h3 {
+    font-size: 3rem;
+    padding: 0rem 1rem;
+  }
+  .cloud {
+    height: 40rem;
+    pointer-events: none;
+  }
+  .cloud1 {
+    z-index: -1;
+  }
+  .cloud2 {
+    display: none;
+  }
+
+  .locations-head {
+    h2 {
+      padding-bottom: 1rem;
+    }
+    h3 {
+      background: rgba(19, 28, 39, 0.8);
+      -webkit-text-fill-color: whitesmoke;
+      font-family: "Roboto", sans-serif;
+    }
+  }
+  .cards {
+    margin: auto;
+  }
+  .card {
+    min-height: 30vh;
+  }
+  .form-wrapper {
+    width: 90%;
+  }
+  footer {
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+}

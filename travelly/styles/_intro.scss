@@ -1,0 +1,57 @@
+.main-head {
+  background: rgb(51, 12, 45);
+  top: 0%;
+  z-index: 1;
+  position: sticky;
+}
+nav {
+  @include flex(space-between, center, row);
+  width: 90%;
+  margin: auto;
+  min-height: 10vh;
+  flex-wrap: wrap;
+  padding: 2rem;
+
+  .logo {
+    color: white;
+    @include flex(felx-start, center, row);
+    flex: 2 1 40rem;
+    font-family: "Sansita Swashed", cursive;
+  }
+  ul {
+    list-style: none;
+    @include flex(space-around, center, row);
+    flex: 1 1 40rem;
+  }
+}
+
+.intro {
+  min-height: 90vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), transparent),
+    url("/img/landing-page.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @include flex(center, center, column);
+  text-align: center;
+  color: white;
+
+  h2,
+  h3 {
+    padding-bottom: 4rem;
+    text-shadow: rgba(0, 0, 0, 0.8);
+  }
+}
+button {
+  background: $background-color;
+  padding: 1.5rem 4rem;
+  border: none;
+  font-size: 2rem;
+  transition: all 1.5s;
+  cursor: pointer;
+  color: aqua;
+
+  &:hover {
+    background: cornflowerblue;
+  }
+}

@@ -1,0 +1,493 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+li,
+label,
+input,
+p {
+  font-size: 2.5rem;
+  font-family: "Dosis", sans-serif;
+}
+
+h2 {
+  font-size: 6rem;
+}
+
+h3 {
+  font-size: 3.5rem;
+}
+
+h4,
+h5 {
+  font-size: 2rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.main-head {
+  background: #330c2d;
+  top: 0%;
+  z-index: 1;
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 90%;
+  margin: auto;
+  min-height: 10vh;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 2rem;
+}
+
+nav .logo {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: felx-start;
+      -ms-flex-pack: felx-start;
+          justify-content: felx-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 2;
+      -ms-flex: 2 1 40rem;
+          flex: 2 1 40rem;
+  font-family: "Sansita Swashed", cursive;
+}
+
+nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+}
+
+.intro {
+  min-height: 90vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(transparent)), url("/img/landing-page.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.8), transparent), url("/img/landing-page.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  color: white;
+}
+
+.intro h2,
+.intro h3 {
+  padding-bottom: 4rem;
+  text-shadow: rgba(0, 0, 0, 0.8);
+}
+
+button {
+  background: #4e314b;
+  padding: 1.5rem 4rem;
+  border: none;
+  font-size: 2rem;
+  -webkit-transition: all 1.5s;
+  transition: all 1.5s;
+  cursor: pointer;
+  color: aqua;
+}
+
+button:hover {
+  background: cornflowerblue;
+}
+
+.locations {
+  min-height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(transparent)), url("/img/new-york-page.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent), url("/img/new-york-page.png");
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.locations-head {
+  width: 95%;
+  margin: 0 0 0 auto;
+}
+
+.locations-head h2 {
+  padding-bottom: 1rem 0rem;
+  text-decoration: underline;
+}
+
+.locations-head h3 {
+  padding: 4rem 1rem;
+  margin: 0.5rem 3rem 0.5rem 0rem;
+  background: -webkit-gradient(linear, left top, right top, from(#2d2a38), to(#746669));
+  background: linear-gradient(left, #2d2a38, #746669);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.cloud {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  pointer-events: none;
+}
+
+.cloud1 {
+  -webkit-animation: cloudanimation 3s infinite alternate ease-in-out;
+          animation: cloudanimation 3s infinite alternate ease-in-out;
+}
+
+.cloud2 {
+  -webkit-animation: cloudanimation 3.1s infinite alternate ease-in-out 0.5s;
+          animation: cloudanimation 3.1s infinite alternate ease-in-out 0.5s;
+  top: 20%;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+@-webkit-keyframes cloudanimation {
+  from {
+    -webkit-transform: translate(10%, -10%);
+            transform: translate(10%, -10%);
+  }
+  to {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+}
+
+@keyframes cloudanimation {
+  from {
+    -webkit-transform: translate(10%, -10%);
+            transform: translate(10%, -10%);
+  }
+  to {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+}
+
+.benefits-head {
+  min-height: 30vh;
+  background: #343c44;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  color: white;
+}
+
+.benefits-head h2 {
+  margin: 1rem 0rem;
+}
+
+.benefits-head h3 {
+  font-size: 3.4rem;
+  padding-bottom: 1rem;
+}
+
+.benefits {
+  min-height: 90vh;
+}
+
+.cards {
+  width: 90%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 4rem 6rem;
+}
+
+.cards h2 {
+  margin: 1rem;
+  font-size: 4rem;
+}
+
+.cards p {
+  padding: 2rem;
+}
+
+.card {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 25rem;
+          flex: 1 1 25rem;
+  margin: 2rem 5rem;
+  min-height: 40vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1), 0px 20px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1), 0px 20px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cards img {
+  height: 90px;
+  background: #330c2d;
+  padding: 2rem 0rem;
+}
+
+.contact {
+  min-height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(transparent)), url("/img/contact-mountain.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent), url("/img/contact-mountain.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form-wrapper {
+  background: rgba(19, 28, 39, 0.8);
+  width: 50%;
+  color: white;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form-wrapper .form-head {
+  text-align: center;
+  padding: 5rem 0rem;
+}
+
+.form-wrapper .name-label,
+.form-wrapper .email-label {
+  text-align: center;
+  margin: 0rem 3rem;
+  padding-bottom: 5rem;
+}
+
+.form-wrapper button {
+  width: 100%;
+  padding: 2rem;
+  margin-top: 8rem;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.form-wrapper input {
+  padding: 0.5rem 2rem;
+}
+
+.form-wrapper label {
+  margin: 0rem 3rem;
+}
+
+/* footer */
+footer {
+  background: #330c2d;
+}
+
+.foot {
+  width: 90%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-height: 10vh;
+}
+
+.foot h5 {
+  -webkit-box-flex: 2;
+      -ms-flex: 2 1 40rem;
+          flex: 2 1 40rem;
+  color: white;
+  font-size: 3rem;
+}
+
+.foot ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 25rem;
+          flex: 1 1 25rem;
+  list-style: none;
+}
+
+@media screen and (max-width: 934px) {
+  html {
+    font-size: 45%;
+  }
+}
+
+@media screen and (max-width: 672px) {
+  .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 1.5rem;
+  }
+  h2 {
+    font-size: 4.5rem;
+  }
+  h3 {
+    font-size: 3rem;
+    padding: 0rem 1rem;
+  }
+  .cloud {
+    height: 40rem;
+    pointer-events: none;
+  }
+  .cloud1 {
+    z-index: -1;
+  }
+  .cloud2 {
+    display: none;
+  }
+  .locations-head h2 {
+    padding-bottom: 1rem;
+  }
+  .locations-head h3 {
+    background: rgba(19, 28, 39, 0.8);
+    -webkit-text-fill-color: whitesmoke;
+    font-family: "Roboto", sans-serif;
+  }
+  .cards {
+    margin: auto;
+  }
+  .card {
+    min-height: 30vh;
+  }
+  .form-wrapper {
+    width: 90%;
+  }
+  footer {
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

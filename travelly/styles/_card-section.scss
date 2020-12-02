@@ -1,0 +1,47 @@
+.benefits-head {
+  min-height: 30vh;
+  background: #343c44;
+  @include flex(center, center, column);
+  text-align: center;
+  color: white;
+  h2 {
+    margin: 1rem 0rem;
+  }
+  h3 {
+    font-size: 3.4rem;
+    padding-bottom: 1rem;
+  }
+}
+.benefits {
+  min-height: 90vh;
+}
+
+.cards {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 4rem 6rem;
+  h2 {
+    margin: 1rem;
+    font-size: 4rem;
+  }
+  p {
+    padding: 2rem;
+  }
+}
+.card {
+  flex: 1 1 25rem;
+  margin: 2rem 5rem;
+  min-height: 40vh;
+  display: flex;
+  justify-self: center;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1), 0px 20px 20px rgba(0, 0, 0, 0.1);
+}
+.cards img {
+  height: 90px;
+  background: rgb(51, 12, 45);
+  padding: 2rem 0rem;
+}
